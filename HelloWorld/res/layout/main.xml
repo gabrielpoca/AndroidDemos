@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linearlayout android:layout_height="fill_parent" 
+     android:layout_width="fill_parent" android:orientation="vertical" 
+     xmlns:android="http://schemas.android.com/apk/res/android">
+<edittext android:layout_height="wrap_content" 
+             android:layout_width="fill_parent"
+             android:id="@+id/et_Text" />
+<textview android:layout_height="wrap_content" android:layout_width="fill_parent"
+    android:id="@+id/tv_View" />
+</linearlayout>
