@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LocalBrowser</string>
+    <string name="call_javascript_from_android">Call Javascript From Android</string>
+</resources>
