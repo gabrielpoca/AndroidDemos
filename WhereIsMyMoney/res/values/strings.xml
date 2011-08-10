@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WhereIsMyMoney?</string>
+    <string name="empty">No Debts</string>
+    <string name="cash">€ </string>
+    <string name="adddebt_label">Add Debt</string>
+    <string name="add_persone">Name:</string>
+    <string name="add_value">Value:</string>
+    <string name="add_type">Type:</string>
+    <string name="state">State</string>
+    <string name="state_dialog_title">Where is My Money State</string>
+</resources>

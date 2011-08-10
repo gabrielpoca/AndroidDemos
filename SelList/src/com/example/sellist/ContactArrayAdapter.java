@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TwoLineListItem;
 
-@SuppressWarnings("rawtypes")
-public class ContactArrayAdapter extends ArrayAdapter {
+
+public class ContactArrayAdapter extends ArrayAdapter<Object> {
 
 	private final int resourceId;
 

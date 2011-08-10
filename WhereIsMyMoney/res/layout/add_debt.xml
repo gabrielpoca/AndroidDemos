@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<TextView android:text="@string/add_persone"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<EditText android:id="@+id/person" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+		<Button android:id="@+id/searchcontacts" android:text="Search"
+			android:layout_width="wrap_content" android:layout_height="fill_parent" />
+		<TextView android:text="@string/add_value"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<EditText android:id="@+id/value" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+		<TextView android:text="@string/add_type"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<RadioGroup android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="vertical"
+			android:id="@+id/in_out_group">
+			<RadioButton android:checked="false" android:id="@+id/in_radio"
+				android:text="IN" />
+			<RadioButton android:checked="true" android:id="@+id/out_radio"
+				android:text="OUT" />
+		</RadioGroup>
+		<Button android:id="@+id/submit" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Submit Debt" />
+	</LinearLayout>
+</ScrollView>
