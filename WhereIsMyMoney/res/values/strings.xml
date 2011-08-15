@@ -9,4 +9,6 @@
     <string name="add_type">Type:</string>
     <string name="state">State</string>
     <string name="state_dialog_title">Where is My Money State</string>
+    <string name="batchmode">Batch Mode</string>
+    <string name="batchmode_delete">Delete Selected</string>
 </resources>

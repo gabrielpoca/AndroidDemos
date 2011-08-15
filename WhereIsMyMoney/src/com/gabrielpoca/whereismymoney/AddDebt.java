@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Contacts.People;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
 import android.util.Log;
@@ -17,6 +16,7 @@ import static com.gabrielpoca.whereismymoney.DebtData.IN;
 import static com.gabrielpoca.whereismymoney.DebtData.OUT;
 
 public class AddDebt extends Activity {
+	// Activity request codes
 	private final static int PICK_CONTACT = 1;
 	// Debug Variables
 	private final static String DEBUG = "AddDbet DEBUG: ";
@@ -41,34 +41,41 @@ public class AddDebt extends Activity {
 					type = IN;
 				else
 					type = OUT;
-				int int_value = (int) (Float.parseFloat(value.getText().toString())*100);
-				debtManager.addDebt(person.getText().toString(), int_value, type);
+				int int_value = (int) (Float.parseFloat(value.getText()
+						.toString()) * 100);
+				debtManager.addDebt(person.getText().toString(), int_value,
+						type);
 				debtManager.close();
 				finish();
 			}
 		});
 		Button search_button = (Button) findViewById(R.id.searchcontacts);
 		search_button.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+				Intent intent = new Intent(Intent.ACTION_PICK,
+						ContactsContract.Contacts.CONTENT_URI);
 				startActivityForResult(intent, PICK_CONTACT);
 			}
 		});
 	}
-	
+
+	/**
+	 * Handle Activity Results.
+	 */
 	public void onActivityResult(int reqCode, int resultCode, Intent data) {
 		super.onActivityResult(reqCode, resultCode, data);
 		switch (reqCode) {
 		case PICK_CONTACT:
 			Log.d(DEBUG, "RESULT PICK_CONTACT");
-			if(resultCode == Activity.RESULT_OK) {
+			if (resultCode == Activity.RESULT_OK) {
 				Log.d(DEBUG, "RESULT OK");
 				Uri contactData = data.getData();
 				Cursor c = managedQuery(contactData, null, null, null, null);
-				if(c.moveToFirst()) {
-					String name = c.getString(c.getColumnIndex(Contacts.DISPLAY_NAME));
+				if (c.moveToFirst()) {
+					String name = c.getString(c
+							.getColumnIndex(Contacts.DISPLAY_NAME));
 					EditText et = (EditText) findViewById(R.id.person);
 					et.setText(name);
 				}
@@ -79,6 +86,5 @@ public class AddDebt extends Activity {
 			break;
 		}
 	}
-
 
 }
